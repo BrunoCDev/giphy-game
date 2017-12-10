@@ -1,0 +1,29 @@
+{
+  "name": "giphy",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3005",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "concat-stream": "^1.6.0",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "material-ui": "^0.20.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17",
+    "strawpoll": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "prettier": "prettier-standard '**/src/**/*.js **/server/**/*.js'"
+  },
+  "devDependencies": {
+    "prettier-standard": "^7.0.3",
+    "prop-types": "^15.6.0"
+  }
+}

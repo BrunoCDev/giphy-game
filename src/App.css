@@ -1,0 +1,13 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+
+.body {
+  background-image: url('./components/images/background-image.png');
+  background-size: cover;
+  height: 100vh;
+}
+
+.divPlayer1 {
+  width: 50%;
+}
+
+

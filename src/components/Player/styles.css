@@ -1,0 +1,30 @@
+.input-search2 {
+    margin-left: 10px;
+    margin-top: 9.8vh;
+    color: white;
+}
+
+.input-search-button2 {
+    margin-top: 10vh;
+    margin-left: 230px;
+}
+
+.giphy2 {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    float: right;
+    margin-right: 80px;
+    margin-top: 50px;
+}
+
+.giphy-container2 {
+    width: 100%;
+}
+
+.divPlayer2 {
+    float: right;
+    display: inline-block;
+    width: 50%;
+    height: 473px;
+}
