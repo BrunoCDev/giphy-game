@@ -2,6 +2,8 @@ const axios = require('axios')
 
 let votes = []
 
+const games = []
+
 const getVotes = (req, res) => {
   if (votes.length === 0) {
     const { id } = req.params
@@ -13,6 +15,17 @@ const getVotes = (req, res) => {
   }
 }
 
+const newGame = (req, res) => {
+  const game = {
+    giphy1: '',
+    giphy2: '',
+    votes: [0, 0]
+  }
+  games.push(game)
+  res.json(games.length - 1)
+}
+
 module.exports = {
-  getVotes
+  getVotes,
+  newGame
 }

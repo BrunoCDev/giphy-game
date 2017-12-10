@@ -20,6 +20,7 @@ app.use(cors())
 
 app.post('/api/getApiData', controller.getApiData)
 app.get('/api/getVotes/:id', controllerVotes.getVotes)
+app.get('/api/newGame', controllerVotes.newGame)
 
 app.listen(port, () => {
   console.log(`Listening in port: ${port}`)

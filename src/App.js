@@ -1,27 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { BrowserRouter, Route } from 'react-router-dom'
+
+import Home from './containers/Home'
+import Game from './containers/Game'
 import './App.css'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-import Player from './components/Player'
-import Strawpoll from './components/unique-components/strawpoll'
-import './components/unique-components/strawpoll.css'
-
-class App extends Component {
-  render () {
-    return (
-      <div className='body'>
-          <div className='row'>
-            <Strawpoll />
-          </div>
-        <MuiThemeProvider>
-          <div className='players-div row'>
-            <Player label='Player 1' />
-            <Player label='Player 2' />
-          </div>
-        </MuiThemeProvider>
-      </div>
-    )
-  }
-}
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <Route exact path='/game/:id' component={Game} />
+      <Route path='*' component={Home} />
+    </div>
+  </BrowserRouter>
+)
 
 export default App

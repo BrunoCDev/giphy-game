@@ -14,5 +14,5 @@ let getApiData = (req, res) => {
 }
 
 module.exports = {
-  getApiData,
+  getApiData
 }
