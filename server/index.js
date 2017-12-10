@@ -3,6 +3,7 @@ const cors = require('cors')
 const { json } = require('body-parser')
 const controller = require('./controllers/giphy_controllers')
 const controllerVotes = require('./controllers/votescontroller')
+const gamesController = require('./controllers/games')
 
 const port = 3005
 
@@ -20,7 +21,8 @@ app.use(cors())
 
 app.post('/api/getApiData', controller.getApiData)
 app.get('/api/getVotes/:id', controllerVotes.getVotes)
-app.get('/api/newGame', controllerVotes.newGame)
+app.get('/api/newGame', gamesController.newGame)
+app.get('/api/game/:id', gamesController.getGame)
 
 app.listen(port, () => {
   console.log(`Listening in port: ${port}`)

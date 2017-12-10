@@ -19,7 +19,7 @@ const newGame = (req, res) => {
   const game = {
     giphy1: '',
     giphy2: '',
-    votes: [0, 0]
+    votesUrl: [0, 0]
   }
   games.push(game)
   res.json(games.length - 1)
