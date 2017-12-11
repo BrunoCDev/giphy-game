@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import './styles.css'
@@ -10,7 +9,7 @@ const Strawpoll = ({ votes, url }) => (
       Score: {votes[0]} - {votes[1]}
     </h1>
 
-    <a href={url} target='__blank'>
+    <a href={url} className='votenow' target='__blank'>
       Vote now!
     </a>
   </div>

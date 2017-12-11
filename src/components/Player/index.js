@@ -11,29 +11,34 @@ class Player extends Component {
 
     this.state = {
       display: '',
-      giphy: ''
+      giphy: this.props.giphy || ''
     }
 
     this.getApiData = this.getApiData.bind(this)
   }
 
   getApiData () {
+    const { label, gameId } = this.props
+
+    const playerNumber = label.split(' ')[1]
+
     axios
-      .post('/api/getApiData', { display: this.state.display })
+      .post('/api/getApiData', {
+        display: this.state.display,
+        gameId,
+        playerNumber
+      })
       .then(result => {
-        this.setState({ giphy: result.data.data[0].images.original.webp })
+        this.setState({ giphy: result.data[`giphy${playerNumber}`] })
       })
-      .catch(error => {
-        console.log(error)
-      })
+      .catch(console.log)
   }
 
   render () {
-    console.log(this.state.giphy)
     return (
       <div className='divPlayer2 col s12 m6'>
         <RaisedButton
-          className='input-search-button2'
+          className='input-search-button'
           label={this.props.label}
           onClick={this.getApiData}
         />
@@ -41,13 +46,13 @@ class Player extends Component {
           inputStyle={{ color: 'white' }}
           hintStyle={{ color: 'white' }}
           hintText='What Giphy do you wanna search?'
-          className='input-search2'
+          className='input-search'
           onChange={e => this.setState({ display: e.target.value })}
         />
 
-        <div className='giphy-container2'>
+        <div className='giphy-container'>
           {this.state.giphy && (
-            <img className='giphy2' alt='' src={this.state.giphy} />
+            <img className='giphy' alt='' src={this.state.giphy} />
           )}
         </div>
       </div>
@@ -56,7 +61,9 @@ class Player extends Component {
 }
 
 Player.propTypes = {
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
+  giphy: PropTypes.string,
+  gameId: PropTypes.string.isRequired
 }
 
 export default Player
