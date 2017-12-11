@@ -6,3 +6,13 @@
 .delete-button {
     margin-left: 30px;
 }
+
+.loading-body {
+    height: 100vh;
+    background: url('loading.jpg');
+    background: no-repeat;
+}
+
+.reload-button {
+    margin-left: 30px;
+}

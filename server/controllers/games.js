@@ -10,7 +10,11 @@ const initialState = {
 
 const newGame = (req, res) => {
   const nextGameId = games.length
-  const game = initialState
+  const game = {
+    giphy1: '',
+    giphy2: '',
+    votesUrl: ''
+  }
   const options = {
     title: `Giphy Game #${nextGameId}`,
     options: ['Player 1', 'Player 2'],
@@ -40,9 +44,7 @@ const getGame = (req, res) => {
 
 const deleteGame = (req, res) => {
   const { id } = req.params
-  games[id].giphy1 = ''
-  games[id].giphy2 = ''
-  games[id].votesUrl = ''
+  games.splice(id, 1)
   res.json(games[id])
 }
 

@@ -16,6 +16,7 @@ class Game extends Component {
     }
     this.getGameInfo = this.getGameInfo.bind(this)
     this.deleteGame = this.deleteGame.bind(this)
+    this.reloadPage = this.reloadPage.bind(this)
   }
 
   componentDidMount () {
@@ -39,6 +40,10 @@ class Game extends Component {
     axios.delete(`/api/game/${id}`).then(() => this.props.history.push('/'))
   }
 
+  reloadPage () {
+    return window.location.reload()
+  }
+
   render () {
     const { error, isLoading, game } = this.state
     const { history } = this.props
@@ -47,7 +52,9 @@ class Game extends Component {
     const goToHome = () => this.props.history.push('/')
 
     if (error) return <button onClick={() => history.push('/')}>{error}</button>
-    if (isLoading) return <h1>Loading...</h1>
+    if (isLoading) {
+      return <div className='loading-body' />
+    }
     return (
       <div className='body'>
         <div className='row'>
@@ -56,6 +63,9 @@ class Game extends Component {
           </button>
           <button className='delete-button' onClick={this.deleteGame}>
             Delete Game
+          </button>
+          <button className='reload-button' onClick={this.reloadPage}>
+            Update Score
           </button>
           <Strawpoll
             votes={game.votes}
