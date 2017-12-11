@@ -7,6 +7,24 @@
 }
 
 .divPlayer1 {
-  width: 50%;
+  width: 50vw;
 }
 
+.home-button {
+    margin-left: 5vw;
+    margin-top: 3vh;
+}
+
+.delete-button {
+    margin-left: 30vw;
+}
+
+.loading-body {
+    height: 100vh;
+    background: url('./containers/Game/loading.jpg');
+    background: no-repeat;
+}
+
+.reload-button {
+    margin-left: 35vw;
+}

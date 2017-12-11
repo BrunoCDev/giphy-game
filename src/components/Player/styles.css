@@ -1,19 +1,19 @@
 .input-search {
-    margin-left: 10px;
+    margin-left: 1vw;
     color: white;
 }
 
 .input-search-button {
-    margin-left: 130px;
+    margin-left: 12vw;
 }
 
 .giphy {
     display: inline-block;
-    width: 400px;
-    height: 400px;
+    width: 33vw;
+    height: 55vh;
     float: right;
-    margin-right: 80px;
-    margin-top: 50px;
+    margin-right: 5vw;
+    margin-top: 5vh;
 }
 
 .giphy-container {
@@ -23,6 +23,6 @@
 .divPlayer {
     float: right;
     display: inline-block;
-    width: 50%;
-    height: 473px;
+    width: 40vw;
+    height: 50vh;
 }

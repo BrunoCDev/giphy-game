@@ -4,7 +4,6 @@ import axios from 'axios'
 
 import Player from '../../components/Player'
 import Strawpoll from '../../components/Strawpoll'
-import Styles from './styles.css'
 
 class Game extends Component {
   constructor (props) {
@@ -61,11 +60,11 @@ class Game extends Component {
           <button className='home-button' onClick={goToHome}>
             Home
           </button>
-          <button className='delete-button' onClick={this.deleteGame}>
-            Delete Game
-          </button>
           <button className='reload-button' onClick={this.reloadPage}>
             Update Score
+          </button>
+          <button className='delete-button' onClick={this.deleteGame}>
+            Delete Game
           </button>
           <Strawpoll
             votes={game.votes}
