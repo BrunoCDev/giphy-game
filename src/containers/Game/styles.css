@@ -1,0 +1,9 @@
+.body {
+    background-image: url('./../../components/images/background-image.png');
+}
+
+.loading-body {
+    height: 100vh;
+    background: url('./loading.jpg');
+    background: no-repeat;
+}

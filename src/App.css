@@ -1,7 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto';
 
 .body {
-  background-image: url('./components/images/background-image.png');
   background-size: cover;
   height: 100vh;
 }
@@ -19,12 +18,16 @@
     margin-left: 30vw;
 }
 
-.loading-body {
-    height: 100vh;
-    background: url('./containers/Game/loading.jpg');
-    background: no-repeat;
-}
-
 .reload-button {
     margin-left: 35vw;
+}
+
+.game-not-found {
+    height: 100vh;
+    background: url(./components/images/notfound.jpg);
+}
+
+.game-not-found-button {
+    margin-top: 7vh;
+    margin-left: 2vw;
 }

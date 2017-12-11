@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import axios from 'axios'
+import './styles.css'
 
 import Player from '../../components/Player'
 import Strawpoll from '../../components/Strawpoll'
@@ -50,7 +51,18 @@ class Game extends Component {
     const gameId = this.props.location.pathname.substring(6)
     const goToHome = () => this.props.history.push('/')
 
-    if (error) return <button onClick={() => history.push('/')}>{error}</button>
+    if (error) {
+      return (
+        <div className='game-not-found'>
+          <button
+            className='game-not-found-button'
+            onClick={() => history.push('/')}
+          >
+            {error}
+          </button>
+        </div>
+      )
+    }
     if (isLoading) {
       return <div className='loading-body' />
     }

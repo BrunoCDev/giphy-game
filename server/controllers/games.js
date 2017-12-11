@@ -2,12 +2,6 @@ const axios = require('axios')
 
 const games = []
 
-const initialState = {
-  giphy1: '',
-  giphy2: '',
-  votesUrl: ''
-}
-
 const newGame = (req, res) => {
   const nextGameId = games.length
   const game = {

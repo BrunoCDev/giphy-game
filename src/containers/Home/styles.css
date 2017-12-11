@@ -2,12 +2,17 @@
     margin-top: 15%;
     width: 10vw;
     height: 10vh;
+
+}
+
+button:hover {
+    background-color: gold;
 }
 
 .home-container {
     text-align: center;
     height: 100vh;
-    background: url('http://www.hdwallpaperspulse.com/wp-content/uploads/2017/03/28/awesome-railway-road-image.jpg');
+    background: url('./../../components/images/main-page-background.jpg');
     background-repeat: no-repeat;
     background-size: 200vh;
 }
