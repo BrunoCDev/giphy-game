@@ -4,7 +4,7 @@ const { json } = require('body-parser')
 const controller = require('./controllers/giphy_controllers')
 const gamesController = require('./controllers/games')
 
-const port = 3005
+const port = process.env.PORT || 3005
 
 const app = express()
 
@@ -13,7 +13,7 @@ process.on('unhandledRejection', (message, p) => {
   console.log(p)
 })
 
-// app.use(express.static(__dirname + '/../public/build'))
+app.use(express.static(__dirname + '/../public/build'))
 
 app.use(json())
 app.use(cors())

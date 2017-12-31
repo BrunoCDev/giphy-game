@@ -4,10 +4,9 @@
     color: white;
     display: inline-block;
     margin-left: 35vw;
-    padding-right: 20px;
+    padding-right: 1vw;
 }
 
 .votenow {
-    margin-left: 10px;
-    font-size: 25px;
+    font-size: 1.5em;
 }

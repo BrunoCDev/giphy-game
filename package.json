@@ -9,6 +9,7 @@
     "concat-stream": "^1.6.0",
     "cors": "^2.8.4",
     "express": "^4.16.2",
+    "global": "^4.3.2",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
